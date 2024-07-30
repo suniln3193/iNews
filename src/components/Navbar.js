@@ -1,6 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
+import dayIco from '../img/day.svg';
+import nightIco from '../img/night.svg';
 
-const Navbar = () => {
+
+const Navbar = (props) => {
+
+    // Dark Mode Enable
+    const [mode, setMode] = useState('dark')
+    const [modeText, setModeText] = useState('Dark Mode')
+    const [modeImg, setModeImg] = useState(`${props.dayIco}`)
+
+    const toggleMode = () => {
+        if( mode === 'dark'){
+            setMode('light');
+            setModeText('Light Mode')
+            setModeImg('../img/night.svg')
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+            
+        }else{
+            setMode('dark');
+            setModeText('Dark Mode')
+            setModeImg('dayIco')
+            document.body.classList.add('light-mode');
+            document.body.classList.remove('dark-mode');
+        }
+    }
+
+    
     return(
         <>
             <nav className="navbar navbar-expand-lg navbar-dark">
@@ -18,6 +45,11 @@ const Navbar = () => {
                             <a className="nav-link" href="/">About Us</a>
                             </li>
                         </ul>
+                        
+                        {/* Dark mode switch */}
+                        <div className='mode' onClick={toggleMode}>
+                            <img className='modeIco' src={dayIco} ></img>
+                        </div>
                     </div>
                 </div>
             </nav>
