@@ -27,6 +27,16 @@
   color:var(--lightTheme);
 }
 
+.btn,.btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+  background-color:var(--redTheme);
+  color:var(--lightTheme);
+  border-color:var(--redTheme);
+  transition:all 0.5s;
+}
+.btn:hover{
+  background-color:#c90f0f;
+}
+
 .navbar .nav-link.active,
 .navbar .nav-link:hover{
   color: var(--redTheme);
@@ -43,22 +53,28 @@
 }
 .modeChangeAlert {
   position: absolute;
-  left: -120px;
+  left: -80px;
   right: auto;
-  font-size: 15px;
+  font-size: 10px;
   white-space: nowrap;
   top: 48px;
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .1);
-  padding: 7px;
+  padding: 13px;
   border-radius: 10px;
   color: #fff;
   font-weight: 700;
-  background:var(--redTheme);
+  background: var(--redTheme);
   opacity: 0;
-  visibility:hidden;
+  visibility: hidden;
+  transform: scale(0);
   transition: 0.2s;
 }
 .modeIco:hover ~ .modeChangeAlert{
   opacity: 1;
   visibility:visible;
+  transform: scale(1);
+}
+.newsItems .card-img-top{
+  height:200px;
+  object-fit: cover;
 }
