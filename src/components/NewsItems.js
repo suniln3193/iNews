@@ -31,14 +31,14 @@ export default class NewsItems extends Component {
                     onError={this.handleImageError} // Handle error event
                   />
                 </a>
-                {author && (
+                {/* {author && ( */}
                   <span 
                     className="news-source-badge badge bg-warning text-dark position-absolute top-0 left-0 d-block p-1 border-0 m-1 shadow" 
                     style={{ backgroundColor: 'var(--redTheme)' }}
                   >
-                    Source: {author}
+                    Source: {author ? author : 'Unknown'}
                   </span>
-                )}
+                {/* )} */}
               </div>
               <div className="card-body">
                 <h5 className="card_heading card-title heading">{title}</h5>
