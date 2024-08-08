@@ -2,6 +2,10 @@
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+ 
+}
+body{
+  font-size: 1rem;
 }
 :root{
   --primarydarkTheme:#121212;
@@ -48,7 +52,9 @@
 .navbar .nav-link:hover{
   color: var(--redTheme);
 }
-.navbar-brand,.navbar-brand:hover{
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus{
   color: var(--redTheme);
   font-style: italic;
   font-weight: 900;
@@ -111,7 +117,7 @@
   font-weight:700;
 }
 .card_heading{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   overflow: hidden;
   -webkit-box-orient: vertical;
  -webkit-line-clamp: 2;
@@ -129,4 +135,7 @@
 }
 .news-source-badge{
   font-weight:700;
+}
+.read_more{
+  font-size:0.8rem;
 }
