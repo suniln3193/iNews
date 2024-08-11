@@ -101,7 +101,7 @@ export default class News extends Component {
                       description={element.description}
                       url={element.url}
                       author={element.author}
-                      
+                      publishedAt={element.publishedAt}
                     />
                   );
                 })}
