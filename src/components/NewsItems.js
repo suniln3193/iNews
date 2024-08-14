@@ -13,7 +13,6 @@ export default class NewsItems extends Component {
     this.setState({ imgSrc: placeholder }); // Fallback to placeholder image on error
   };
   
- 
 
   render() {
     const { title, description, url, author, publishedAt } = this.props;
@@ -43,7 +42,7 @@ export default class NewsItems extends Component {
                     <h5 className="card_heading card-title heading">{title}</h5>
                     <p className="card-text">{description}</p>
                   </div>
-                  <div className='newsCardFooter border-top px-3 py-2 position-relative'>
+                  <div className='newsCardFooter border-top px-3 py-3 position-relative'>
                     <p  className='mb-0 h-auto publicDate'><b>{` ${new Date(publishedAt).toLocaleString('default', { month: 'short' })} ${new Date(publishedAt).getDay()}, ${new Date(publishedAt).getFullYear()}`}</b></p>
                     <div className='arrowR position-absolute'>
                       <svg className='w-100' xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100"/></svg>

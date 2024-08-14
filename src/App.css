@@ -150,14 +150,14 @@ body{
 .arrowR{
   width: 1.5rem;
   right: 0.9rem;
-  top: 0.3rem;
+  top: 0.8rem;
   transition: 0.4s all;
   -webkit-transition: 0.4s all;
   -o-transition: 0.4s all;
 }
 .newsItems:hover .arrowR{
-  transform: translateX(7px);
-  -webkit-transform: translateX(7px);
+  transform: translateX(3px);
+  -webkit-transform: translateX(3px);
 }
 .publicDate, .publicDate b{
   color: #353535;
