@@ -26,6 +26,7 @@ export default class NewsItems extends Component {
                 <div className="card border-0">
                   <div className='img_placeholder position-relative'>
                       <img 
+                        loading="lazy" 
                         src={imgSrc} 
                         className="card-img-top" 
                         alt={title} 

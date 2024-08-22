@@ -30,13 +30,15 @@ export default class News extends Component {
       totalResults: 0,
       hasMore: true,
     };
-    document.title = `${this.capitalizeFirstLetter(this.props.category)} - iNews`;
+    document.title = `${this.capitalizeFirstLetter(
+      this.props.category
+    )} - iNews`;
   }
 
   async updateNews() {
     this.props.setProgress(10);
     // const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=d093053d72bc40248998159804e0e67d&page=${this.state.page}&pageSize=${this.props.pageSize}`;
-    const url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/${this.props.country}.json`
+    const url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/${this.props.country}.json`;
     this.setState({ loading: true });
     let data = await fetch(url);
     this.props.setProgress(30);
@@ -60,7 +62,7 @@ export default class News extends Component {
 
     this.setState({ loading: true });
     // const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=d093053d72bc40248998159804e0e67d&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
-    let url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/${this.props.country}.json`
+    let url = `https://saurav.tech/NewsAPI/top-headlines/category/${this.props.category}/${this.props.country}.json`;
     let data = await fetch(url);
     let parsedData = await data.json();
 
